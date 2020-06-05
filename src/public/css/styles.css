@@ -1,0 +1,45 @@
+html { font-size: 22px; }
+body { 
+  margin: 0;
+  /*padding: 1rem;*/
+ }
+nav{
+    display: grid;
+    width: 100%;
+  }
+  .item{
+    background-color: #272727;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+  }
+  a{
+    color: aqua;
+    text-decoration: none;
+  }
+  @media (min-width: 320px) {
+    .cards { 
+      grid-template-columns: repeat(1, 1fr);
+    }
+    nav{
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  /* Screen larger than 600px? 2 column */
+  @media (min-width: 600px) {
+    .cards { 
+      grid-template-columns: repeat(2, 1fr);
+    }
+    nav{
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  /* Screen larger than 900px? 3 columns */
+  @media (min-width: 900px) {
+    .cards { grid-template-columns: repeat(3, 1fr); }
+    nav{
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
